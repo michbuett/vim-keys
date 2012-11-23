@@ -3,11 +3,9 @@
 " easier commands with german keyboard layout
 nmap ö :
 
-" common saving
-"nmap: <C-s> :w<CR>
-
-" avoid <Esc>
-:map <C-c> <Esc>
+" easy config
+nmap <F9> :new $HOME/.vimrc<CR>
+nmap <F10> :so $HOME/.vimrc<CR>
 
 " format entire file
 :map <leader>fa gg=G
