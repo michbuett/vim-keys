@@ -89,8 +89,10 @@ map <C-Right> <Esc>:wincmd l<CR>
 map <C-l> <Esc>:wincmd l<CR>
 
 " trigger NERDTree, Tagbar $ Co.
-map <leader>n <Esc>:NERDTreeToggle<CR>
-map <leader>t <Esc>:TagbarToggle<CR>
+nmap <leader>n <Esc>:NERDTreeToggle<CR>
+nmap <leader>t <Esc>:TagbarToggle<CR>
+nmap <leader>f "zyaw:exe ":Ack ".@z.""<CR>
+
 
 nmap oi aI
 vmap oi aI
