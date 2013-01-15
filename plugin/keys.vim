@@ -1,4 +1,5 @@
-:let mapleader = ","
+nnoremap <SPACE> <Nop>
+:let mapleader = " "
 
 " easier commands with german keyboard layout
 nmap ö :
@@ -36,36 +37,22 @@ vmap <A-Down> :m'>+<CR>gv=gv
 
 " Indent lines using <Left> and <Right>
 vmap <A-Right> >gv
-vmap <A-l> >gv
 nmap <A-Right> >>
-nmap <A-l> >>
 imap <A-Right> <Esc>>>i
-imap <A-l> <Esc>>>i
 vmap <A-Left> <gv
-vmap <A-h> <gv
 nmap <A-Left> <<
-nmap <A-h> <<
 imap <A-Left> <Esc><<i
-imap <A-h> <Esc><<i
 
 " Select text using <shift> + arrow keys
 map <S-Up> <Esc>v<Up>
-map <S-k> <Esc>v<Up>
 map <S-Down> <Esc>v<Down>
-map <S-j> <Esc>v<Down>
 map <S-Left> <Esc>v<Left>
-map <S-h> <Esc>v<Left>
 map <S-Right> <Esc>v<Right>
-map <S-l> <Esc>v<Right>
 " swallow <shift> in visual mode
 vmap <S-Up> <Up>
-vmap <S-k> <Up>
 vmap <S-Down> <Down>
-vmap <S-j> <Down>
 vmap <S-Left> <Left>
-vmap <S-h> <Left>
 vmap <S-Right> <Right>
-vmap <S-l> <Right>
 
 " Remap window commands
 map <leader>ws <Esc>:wincmd s<CR>
