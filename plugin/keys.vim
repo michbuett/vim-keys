@@ -2,7 +2,7 @@ nnoremap <SPACE> <Nop>
 :let mapleader = " "
 
 " easier commands with german keyboard layout
-nmap ö :
+nmap Ö :
 
 " easy config
 nmap <F9> :new $HOME/.vimrc<CR>
@@ -75,10 +75,14 @@ map <C-h> <Esc>:wincmd h<CR>
 map <C-Right> <Esc>:wincmd l<CR>
 map <C-l> <Esc>:wincmd l<CR>
 
+" tags
+nmap <F3> <C-]>
+nmap <F4> :split<CR>:exec("tag ".expand("<cword>"))<CR>
+
 " trigger NERDTree, Tagbar $ Co.
 nmap <leader>n <Esc>:NERDTreeToggle<CR>
 nmap <leader>t <Esc>:TagbarToggle<CR>
-nmap <leader>f "zyaw:exe ":Ack ".@z.""<CR>
+nmap <leader>f "zyaw :exe ":Ack ".@z.""<CR>
 
 
 nmap oi aI
