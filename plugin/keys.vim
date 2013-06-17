@@ -76,8 +76,8 @@ map <C-Right> <Esc>:wincmd l<CR>
 map <C-l> <Esc>:wincmd l<CR>
 
 " tags
-nmap <F3> <C-]>
-nmap <F4> :split<CR>:exec("tag ".expand("<cword>"))<CR>
+nmap <F3> :exec("tjump ".expand("<cword>"))<CR>
+nmap <F4> :split<CR>:exec("tjump ".expand("<cword>"))<CR>
 
 " trigger NERDTree, Tagbar $ Co.
 nmap <leader>n <Esc>:NERDTreeToggle<CR>
