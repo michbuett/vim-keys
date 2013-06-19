@@ -18,10 +18,10 @@ nmap <F10> :so $HOME/.vimrc<CR>
 " map keys for tabs
 :map <C-tab> :tabnext<CR>
 :map <C-S-tab> :tabprevious<CR>
-:map <C-t> :tabnew<CR>
 :imap <C-tab> <Esc>:tabnext<CR>
 :imap <C-S-tab> <Esc>:tabprevious<CR>
-:imap <C-t> <Esc>:tabnew<CR>
+:map <C-S-t> :tabnew<CR>
+:imap <C-S-t> <Esc>:tabnew<CR>
 
 " Bubble single lines
 nmap <A-k> :m-2<CR>==
@@ -83,7 +83,8 @@ nmap <F4> :split<CR>:exec("tjump ".expand("<cword>"))<CR>
 nmap <leader>n <Esc>:NERDTreeToggle<CR>
 nmap <leader>t <Esc>:TagbarToggle<CR>
 nmap <leader>f "zyaw :exe ":Ack ".@z.""<CR>
-
+nmap <C-f> :CtrlP<CR>
+nmap <C-t> :CtrlPTag<CR>
 
 nmap oi aI
 vmap oi aI
