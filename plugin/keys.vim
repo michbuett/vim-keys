@@ -85,6 +85,7 @@ nmap <leader>t <Esc>:TagbarToggle<CR>
 nmap <leader>f "zyaw :exe ":Ack ".@z.""<CR>
 nmap <C-f> :CtrlP<CR>
 nmap <C-t> :CtrlPTag<CR>
+nmap <C-b> :CtrlPBuffer<CR>
 
 nmap oi aI
 vmap oi aI
