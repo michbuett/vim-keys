@@ -15,13 +15,11 @@ map <leader>fa gg=G
 vmap <A-y> "+y
 nmap <A-p> "+p
 
-" map keys for tabs
-:map <C-tab> :tabnext<CR>
-:map <C-S-tab> :tabprevious<CR>
-:imap <C-tab> <Esc>:tabnext<CR>
-:imap <C-S-tab> <Esc>:tabprevious<CR>
-:map <C-S-t> :tabnew<CR>
-:imap <C-S-t> <Esc>:tabnew<CR>
+" map keys for moving through buffers
+noremap <C-tab> :bn<CR>
+noremap <C-S-tab> :bp<CR>
+inoremap <C-tab> <Esc>:bn<CR>
+inoremap <C-S-tab> <Esc>:bp<CR>
 
 " Bubble single lines
 nmap <A-k> :m-2<CR>==
