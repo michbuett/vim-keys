@@ -2,7 +2,7 @@ nnoremap <SPACE> <Nop>
 :let mapleader = " "
 
 " easier commands with german keyboard layout
-nmap Ö :
+nmap ö :
 
 " easy config
 nmap <F9> :new $HOME/.vimrc<CR>
