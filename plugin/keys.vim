@@ -9,7 +9,7 @@ nmap <F9> :new $HOME/.vimrc<CR>
 nmap <F10> :so $HOME/.vimrc<CR>
 
 " format entire file
-:map <leader>fa gg=G
+map <leader>fa gg=G
 
 " copy/paste from system register
 :vmap <A-y> "*y
