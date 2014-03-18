@@ -12,8 +12,8 @@ nmap <F10> :so $HOME/.vimrc<CR>
 map <leader>fa gg=G
 
 " copy/paste from system register
-:vmap <A-y> "*y
-:nmap <A-p> "*p
+vmap <A-y> "+y
+nmap <A-p> "+p
 
 " map keys for tabs
 :map <C-tab> :tabnext<CR>
