@@ -41,16 +41,11 @@ vmap <A-Left> <gv
 nmap <A-Left> <<
 imap <A-Left> <Esc><<i
 
-" Select text using <shift> + arrow keys
-map <S-Up> <Esc>v<Up>
-map <S-Down> <Esc>v<Down>
-map <S-Left> <Esc>v<Left>
-map <S-Right> <Esc>v<Right>
-" swallow <shift> in visual mode
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
+" Avoid nasty things when using <shift> + arrow keys
+noremap <S-Up> <Up>
+noremap <S-Down> <Down>
+noremap <S-Left> <Left>
+noremap <S-Right> <Right>
 
 " Remap window commands
 map <leader>ws <Esc>:wincmd s<CR>
@@ -64,10 +59,10 @@ map <leader>w= <Esc>:wincmd =<CR>
 nmap + :vertical resize +20<CR>
 nmap - :vertical resize -20<CR>
 map <C-S--> <Esc>:wincmd ><CR>
-map <C-Down> <Esc>:wincmd j<CR>:wincmd _<CR>
-map <C-j> <Esc>:wincmd j<CR>:wincmd _<CR>
-map <C-Up> <Esc>:wincmd k<CR>:wincmd _<CR>
-map <C-k> <Esc>:wincmd k<CR>:wincmd _<CR>
+map <C-Down> <Esc>:wincmd j<CR>
+map <C-j> <Esc>:wincmd j<CR>
+map <C-Up> <Esc>:wincmd k<CR>
+map <C-k> <Esc>:wincmd k<CR>
 map <C-Left> <Esc>:wincmd h<CR>
 map <C-h> <Esc>:wincmd h<CR>
 map <C-Right> <Esc>:wincmd l<CR>
