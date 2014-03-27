@@ -15,6 +15,9 @@ map <leader>fa gg=G
 vmap <A-y> "+y
 nmap <A-p> "+p
 
+" Force saving files that require root permission
+command SUDOwrite :execute 'w !sudo tee > /dev/null %' | edit!
+
 " map keys for moving through buffers
 noremap <C-tab> :bn<CR>
 noremap <C-S-tab> :bp<CR>

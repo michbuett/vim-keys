@@ -19,6 +19,8 @@ The leader key is mapped to `[Space]`
 
 `[Shift]+[<Arrow>]` does nothing but moving the cursor
 
+The command `SUDOwrite` forces saving files that require root permission
+
 The window commands are remapped:
 - `[<leader>][w][s]` Creates a new horizontal split
 - `[<leader>][w][v]` Creates a new vertical split
