@@ -9,9 +9,7 @@ The leader key is mapped to `[Space]`
 
 `[F10]` Reads-in the `.vimrc` again
 
-`[Alt]+[y]` copies to the system register (+)
-
-`[Alt]+[p]` pastes form the system register (+)
+In insert mode you can paste the content of the system clipboard using `[Shift]+[Insert]`
 
 `[Ctrl]+[Tab]` (`[Ctrl]+[Shift]+[Tab]`) switches to the next (previous) buffer
 

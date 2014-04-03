@@ -11,10 +11,6 @@ nmap <F10> :so $HOME/.vimrc<CR>
 " format entire file
 map <leader>fa gg=G
 
-" copy/paste from system register
-vmap <A-y> "+y
-nmap <A-p> "+p
-
 " Force saving files that require root permission
 command SUDOwrite :execute 'w !sudo tee > /dev/null %' | edit!
 
@@ -85,3 +81,6 @@ nmap <C-b> :CtrlPBuffer<CR>
 
 nmap oi aI
 vmap oi aI
+
+" paste from system clipboard
+inoremap <silent> <S-Insert> <ESC>:set paste<CR>"+p :set nopaste<CR>
