@@ -1,12 +1,12 @@
 nnoremap <SPACE> <Nop>
-:let mapleader = " "
+let mapleader = " "
 
 " easier commands with german keyboard layout
 nmap ö :
 
 " easy config
-nmap <F9> :new $HOME/.vimrc<CR>
-nmap <F10> :so $HOME/.vimrc<CR>
+nmap <S-F9> :e $HOME/.vimrc<CR>
+nmap <S-F10> :so $HOME/.vimrc<CR>
 
 " format entire file
 map <leader>fa gg=G
