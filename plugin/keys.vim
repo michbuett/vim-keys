@@ -84,3 +84,6 @@ vmap oi aI
 
 " paste from system clipboard
 inoremap <silent> <S-Insert> <ESC>:set paste<CR>"+p :set nopaste<CR>
+
+" toggle spellcheck
+nmap <silent> <S-F7> :setlocal spell! spelllang=en_us<CR>
