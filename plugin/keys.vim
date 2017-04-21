@@ -1,36 +1,28 @@
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
-" easier commands with german keyboard layout
-nmap ö :
-
 " easy config
 nmap <S-F9> :e $HOME/.vimrc<CR>
 nmap <S-F10> :so $HOME/.vimrc<CR>
 
-" format entire file
-map <leader>fa gg=G
-
 " Force saving files that require root permission
-command SUDOwrite :execute 'w !sudo tee > /dev/null %' | edit!
-
-" map keys for moving through buffers
-noremap <C-tab> :bn<CR>
-noremap <C-S-tab> :bp<CR>
-inoremap <C-tab> <Esc>:bn<CR>
-inoremap <C-S-tab> <Esc>:bp<CR>
+command! SUDOwrite :execute 'w !sudo tee > /dev/null %' | edit!
 
 " Bubble single lines
-nmap <A-k> :m-2<CR>==
-nmap <A-Up> :m-2<CR>==
-nmap <A-j> :m+<CR>==
-nmap <A-Down> :m+<CR>==
+nmap <silent> <A-k> :m-2<CR>==
+nmap <silent> <A-Up> :m-2<CR>==
+nmap <silent> ∆ :m-2<CR>==
+nmap <silent> <A-j> :m+<CR>==
+nmap <silent> <A-Down> :m+<CR>==
+nmap <silent> º :m+<CR>==
 
 " Bubble multiple lines
-vmap <A-k> :m-2<CR>gv=gv
-vmap <A-Up> :m-2<CR>gv=gv
-vmap <A-j> :m'>+<CR>gv=gv
-vmap <A-Down> :m'>+<CR>gv=gv
+vmap <silent> <A-k> :m-2<CR>gv=gv
+vmap <silent> <A-Up> :m-2<CR>gv=gv
+vmap <silent> ∆ :m-2<CR>gv=gv
+vmap <silent> <A-j> :m'>+<CR>gv=gv
+vmap <silent> <A-Down> :m'>+<CR>gv=gv
+vmap <silent> º :m'>+<CR>gv=gv
 
 " Indent lines using <Left> and <Right>
 vmap <A-Right> >gv
@@ -40,11 +32,13 @@ vmap <A-Left> <gv
 nmap <A-Left> <<
 imap <A-Left> <Esc><<i
 
-" Avoid nasty things when using <shift> + arrow keys
-noremap <S-Up> <Up>
-noremap <S-Down> <Down>
-noremap <S-Left> <Left>
-noremap <S-Right> <Right>
+" moving through location list items
+noremap <S-Up> :lprevious<CR>
+noremap <S-Down> :lnext<CR>
+
+" moving through buffers
+noremap <S-Left> :bn<CR>
+noremap <S-Right> :bp<CR>
 
 " Remap window commands
 map <leader>ws <Esc>:wincmd s<CR>
@@ -73,14 +67,14 @@ nmap <S-F4> :split<CR>:exec("tjump ".expand("<cword>"))<CR>
 
 " trigger NERDTree, Tagbar $ Co.
 nmap <leader>n <Esc>:NERDTreeToggle<CR>
-nmap <leader>t <Esc>:TagbarToggle<CR>
-nmap <leader>f "zyaw :exe ":Ack ".@z.""<CR>
+" nmap <leader>t <Esc>:TagbarToggle<CR>
+" nmap <leader>f "zyaw :exe ":Ack ".@z.""<CR>
 nmap <C-f> :CtrlP<CR>
 nmap <C-t> :CtrlPTag<CR>
 nmap <C-b> :CtrlPBuffer<CR>
 
-nmap oi aI
-vmap oi aI
+" grep word under cursor
+nnoremap <silent><leader>f :lgr! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " paste from system clipboard
 inoremap <silent> <S-Insert> <ESC>:set paste<CR>"+p :set nopaste<CR>
