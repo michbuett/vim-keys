@@ -57,3 +57,7 @@ inoremap <silent> <S-Insert> <ESC>:set paste<CR>"+p :set nopaste<CR>
 
 " toggle spellcheck
 nmap <silent><leader><F7> :setlocal spell! spelllang=en_us<CR>
+
+" quit insert mode on jk/kj (new macbooks make ESC-key almost unusable)
+inoremap jk <ESC>
+inoremap kj <ESC>
